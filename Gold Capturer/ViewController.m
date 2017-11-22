@@ -15,6 +15,9 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
+    _Introduction.hidden = YES;
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -26,4 +29,7 @@
 }
 
 
+- (IBAction)Intro:(UIButton *)sender {
+    _Introduction.hidden = NO;
+}
 @end

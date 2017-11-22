@@ -15,6 +15,12 @@
 		3B7072A01FC5EDCA000347C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70729F1FC5EDCA000347C7 /* main.m */; };
 		3B7072AA1FC5EDCA000347C7 /* Gold_CapturerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7072A91FC5EDCA000347C7 /* Gold_CapturerTests.m */; };
 		3B7072B51FC5EDCA000347C7 /* Gold_CapturerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7072B41FC5EDCA000347C7 /* Gold_CapturerUITests.m */; };
+		3B7072C31FC5F125000347C7 /* gray bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7072C21FC5F125000347C7 /* gray bar.png */; };
+		3B7072C51FC5F12B000347C7 /* background1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B7072C41FC5F12B000347C7 /* background1.jpg */; };
+		3B7072C71FC5F12F000347C7 /* stone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7072C61FC5F12F000347C7 /* stone.png */; };
+		3B7072C91FC5F133000347C7 /* lanzi.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7072C81FC5F133000347C7 /* lanzi.png */; };
+		3B7072CB1FC5F137000347C7 /* dd.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7072CA1FC5F137000347C7 /* dd.png */; };
+		3B7072CD1FC5F151000347C7 /* gold.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7072CC1FC5F151000347C7 /* gold.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		3B7072B01FC5EDCA000347C7 /* Gold CapturerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gold CapturerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7072B41FC5EDCA000347C7 /* Gold_CapturerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Gold_CapturerUITests.m; sourceTree = "<group>"; };
 		3B7072B61FC5EDCA000347C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B7072C21FC5F125000347C7 /* gray bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gray bar.png"; sourceTree = "<group>"; };
+		3B7072C41FC5F12B000347C7 /* background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1.jpg; sourceTree = "<group>"; };
+		3B7072C61FC5F12F000347C7 /* stone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stone.png; sourceTree = "<group>"; };
+		3B7072C81FC5F133000347C7 /* lanzi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lanzi.png; sourceTree = "<group>"; };
+		3B7072CA1FC5F137000347C7 /* dd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dd.png; sourceTree = "<group>"; };
+		3B7072CC1FC5F151000347C7 /* gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gold.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +122,12 @@
 				3B70729B1FC5EDCA000347C7 /* LaunchScreen.storyboard */,
 				3B70729E1FC5EDCA000347C7 /* Info.plist */,
 				3B70729F1FC5EDCA000347C7 /* main.m */,
+				3B7072C21FC5F125000347C7 /* gray bar.png */,
+				3B7072C41FC5F12B000347C7 /* background1.jpg */,
+				3B7072C61FC5F12F000347C7 /* stone.png */,
+				3B7072C81FC5F133000347C7 /* lanzi.png */,
+				3B7072CA1FC5F137000347C7 /* dd.png */,
+				3B7072CC1FC5F151000347C7 /* gold.png */,
 			);
 			path = "Gold Capturer";
 			sourceTree = "<group>";
@@ -239,8 +257,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B70729D1FC5EDCA000347C7 /* LaunchScreen.storyboard in Resources */,
+				3B7072CB1FC5F137000347C7 /* dd.png in Resources */,
+				3B7072CD1FC5F151000347C7 /* gold.png in Resources */,
+				3B7072C71FC5F12F000347C7 /* stone.png in Resources */,
 				3B70729A1FC5EDCA000347C7 /* Assets.xcassets in Resources */,
 				3B7072981FC5EDCA000347C7 /* Main.storyboard in Resources */,
+				3B7072C51FC5F12B000347C7 /* background1.jpg in Resources */,
+				3B7072C91FC5F133000347C7 /* lanzi.png in Resources */,
+				3B7072C31FC5F125000347C7 /* gray bar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
