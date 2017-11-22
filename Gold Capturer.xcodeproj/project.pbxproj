@@ -21,6 +21,8 @@
 		3B7072C91FC5F133000347C7 /* lanzi.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7072C81FC5F133000347C7 /* lanzi.png */; };
 		3B7072CB1FC5F137000347C7 /* dd.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7072CA1FC5F137000347C7 /* dd.png */; };
 		3B7072CD1FC5F151000347C7 /* gold.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7072CC1FC5F151000347C7 /* gold.png */; };
+		3B7072D01FC5F8F6000347C7 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7072CF1FC5F8F6000347C7 /* Game.m */; };
+		3B7072D31FC5F91E000347C7 /* Result.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7072D21FC5F91E000347C7 /* Result.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,10 @@
 		3B7072C81FC5F133000347C7 /* lanzi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lanzi.png; sourceTree = "<group>"; };
 		3B7072CA1FC5F137000347C7 /* dd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dd.png; sourceTree = "<group>"; };
 		3B7072CC1FC5F151000347C7 /* gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gold.png; sourceTree = "<group>"; };
+		3B7072CE1FC5F8F6000347C7 /* Game.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		3B7072CF1FC5F8F6000347C7 /* Game.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		3B7072D11FC5F91E000347C7 /* Result.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Result.h; sourceTree = "<group>"; };
+		3B7072D21FC5F91E000347C7 /* Result.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Result.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,10 @@
 				3B7072931FC5EDCA000347C7 /* ViewController.h */,
 				3B7072941FC5EDCA000347C7 /* ViewController.m */,
 				3B7072961FC5EDCA000347C7 /* Main.storyboard */,
+				3B7072D11FC5F91E000347C7 /* Result.h */,
+				3B7072D21FC5F91E000347C7 /* Result.m */,
+				3B7072CE1FC5F8F6000347C7 /* Game.h */,
+				3B7072CF1FC5F8F6000347C7 /* Game.m */,
 				3B7072991FC5EDCA000347C7 /* Assets.xcassets */,
 				3B70729B1FC5EDCA000347C7 /* LaunchScreen.storyboard */,
 				3B70729E1FC5EDCA000347C7 /* Info.plist */,
@@ -291,7 +301,9 @@
 			files = (
 				3B7072951FC5EDCA000347C7 /* ViewController.m in Sources */,
 				3B7072A01FC5EDCA000347C7 /* main.m in Sources */,
+				3B7072D31FC5F91E000347C7 /* Result.m in Sources */,
 				3B7072921FC5EDCA000347C7 /* AppDelegate.m in Sources */,
+				3B7072D01FC5F8F6000347C7 /* Game.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
