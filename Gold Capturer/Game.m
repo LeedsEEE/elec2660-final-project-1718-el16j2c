@@ -10,27 +10,19 @@
 
 @interface Game ()
 @property (nonatomic, weak) NSTimer *timer;
-@property (nonatomic, weak) NSTimer *BasketTimer;
+@property CGFloat BasketMove;
 @end
 
 @implementation Game
 
--(void) touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    UITouch *touch = [touches anyObject];
-    CGPoint point = [touch locationInView:self.view];
-    if (point.x < Basket.center.x){
-        BasketMove = -40;
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+    // I've learnt this code from following website:http://blog.csdn.net/zhengang007/article/details/46873267
+    
+        UITouch *touch = [touches anyObject];
+        _BasketMove = [touch locationInView:self.view].x-[touch previousLocationInView:self.view].x;
+        Basket.center = CGPointMake(Basket.center.x+_BasketMove, Basket.center.y);
     }
-    else if (point.x > Basket.center.x){
-        BasketMove = 40;
-    }
-    if (CGRectIntersectsRect(LeftEdge.frame, Basket.frame) && (point.x<329)){
-        BasketMove = 0;
-    }
-    if (CGRectIntersectsRect(RightEdge.frame, Basket.frame) && (point.x>329)){
-        BasketMove = 0;
-    }
-}
+
 
 
 
@@ -63,7 +55,7 @@
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
         if (LiveDecrease == 0){
             [_timer invalidate];
-            Menu.hidden = NO;
+
         }
     }
     
@@ -75,7 +67,7 @@
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
         if (LiveDecrease == 0){
             [_timer invalidate];
-            Menu.hidden = NO;
+         
         }
     }
     
@@ -90,7 +82,7 @@
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
         if (LiveDecrease == 0){
             [_timer invalidate];
-            Menu.hidden = NO;
+           
         }
     }
     
@@ -105,7 +97,7 @@
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
         if (LiveDecrease == 0){
             [_timer invalidate];
-            Menu.hidden = NO;
+           
         }
     }
     
@@ -116,7 +108,7 @@
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
         if (LiveDecrease == 0){
             [_timer invalidate];
-            Menu.hidden = NO;
+           
         }
     }
     
@@ -176,8 +168,8 @@
     
     Menu.hidden = YES;
     
-    _timer = [NSTimer scheduledTimerWithTimeInterval:(0.03) target:self selector:@selector(MoveDown) userInfo:nil repeats:YES];   // I've learnt this code from the following website: http://www.cocoachina.com/ios/20150710/12444.html
-    _BasketTimer = [NSTimer scheduledTimerWithTimeInterval:(0.03) target:self selector:@selector(BasketMovement) userInfo:nil repeats:YES];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:(0.02) target:self selector:@selector(MoveDown) userInfo:nil repeats:YES];   // I've learnt this code from the following website: http://www.cocoachina.com/ios/20150710/12444.html
+
     
     LiveDecrease = 10;
     
