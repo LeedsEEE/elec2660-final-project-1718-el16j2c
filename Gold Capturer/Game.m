@@ -49,6 +49,13 @@
     
     
     
+    NSUserDefaults *userDefaults=[NSUserDefaults standardUserDefaults];
+    NSInteger best = [userDefaults integerForKey:@"The Best"];
+    
+
+    
+    
+    
     if (CGRectIntersectsRect(G1.frame, Bottom.frame)) {  // I've learnt the principle of CGRectIntersectsRect and how to use CGRectIntersectsRect from the following website: https://stackoverflow.com/questions/21646295/collision-detection-cgrectintersectrect
         
         G1.center = CGPointMake(G1.center.x, -178); //　when gold hit the bottom
@@ -69,6 +76,16 @@
             Score.hidden = YES;
             LivesLeft.hidden = YES;
             YourScore.text = [NSString stringWithFormat:@"Your Score: %i", ScoreIncrease];
+            scoreinteger=ScoreIncrease;
+            if(scoreinteger > best){
+                [userDefaults setInteger: scoreinteger forKey:@"The Best"];
+                Best.text=[NSString stringWithFormat:@"The Best :%d",scoreinteger];
+                New.hidden = NO;
+            }
+            
+            else{
+                Best.text=[NSString stringWithFormat:@"The Best : %ld", (long)best];
+            }
         }
     }
     
@@ -93,6 +110,16 @@
             Score.hidden = YES;
             LivesLeft.hidden = YES;
             YourScore.text = [NSString stringWithFormat:@"Your Score: %i", ScoreIncrease];
+            scoreinteger=ScoreIncrease;
+            if(scoreinteger > best){
+                [userDefaults setInteger: scoreinteger forKey:@"The Best"];
+                Best.text=[NSString stringWithFormat:@"The Best :%d",scoreinteger];
+                New.hidden = NO;
+            }
+            
+            else{
+                Best.text=[NSString stringWithFormat:@"The Best : %ld", (long)best];
+            }
         }
     }
     
@@ -120,6 +147,16 @@
             Score.hidden = YES;
             LivesLeft.hidden = YES;
             YourScore.text = [NSString stringWithFormat:@"Your Score: %i", ScoreIncrease];
+            scoreinteger=ScoreIncrease;
+            if(scoreinteger > best){
+                [userDefaults setInteger: scoreinteger forKey:@"The Best"];
+                Best.text=[NSString stringWithFormat:@"The Best :%d",scoreinteger];
+                New.hidden = NO;
+            }
+            
+            else{
+                Best.text=[NSString stringWithFormat:@"The Best : %ld", (long)best];
+            }
         }
     }
     
@@ -147,6 +184,16 @@
             Score.hidden = YES;
             LivesLeft.hidden = YES;
             YourScore.text = [NSString stringWithFormat:@"Your Score: %i", ScoreIncrease];
+            scoreinteger=ScoreIncrease;    if(scoreinteger > best){
+                [userDefaults setInteger: scoreinteger forKey:@"The Best"];
+                Best.text=[NSString stringWithFormat:@"The Best :%d",scoreinteger];
+                New.hidden = NO;
+            }
+            
+            else{
+                Best.text=[NSString stringWithFormat:@"The Best : %ld", (long)best];
+            }
+            
         }
     }
     
@@ -170,6 +217,16 @@
             Score.hidden = YES;
             LivesLeft.hidden = YES;
             YourScore.text = [NSString stringWithFormat:@"Your Score: %i", ScoreIncrease];
+            scoreinteger=ScoreIncrease;
+            if(scoreinteger > best){
+                [userDefaults setInteger: scoreinteger forKey:@"The Best"];
+                Best.text=[NSString stringWithFormat:@"The Best :%d",scoreinteger];
+                New.hidden = NO;
+            }
+            
+            else{
+                Best.text=[NSString stringWithFormat:@"The Best : %ld", (long)best];
+            }
         }
     }
     
@@ -180,49 +237,56 @@
         G1.center = CGPointMake(G1.center.x, -178);
         ScoreIncrease = ScoreIncrease + 1;
         Score.text = [NSString stringWithFormat:@"Score: %i", ScoreIncrease];
+        scoreinteger=ScoreIncrease;
     }
     
     if (CGRectIntersectsRect(G2.frame, Basket.frame)) {
         G2.center = CGPointMake(G2.center.x, -246);
         ScoreIncrease = ScoreIncrease + 1;
         Score.text = [NSString stringWithFormat:@"Score: %i", ScoreIncrease];
+        scoreinteger=ScoreIncrease;
     }
     
     if (CGRectIntersectsRect(S1.frame, Basket.frame)) {
         S1.center = CGPointMake(S1.center.x, -110);
         LiveDecrease = LiveDecrease - 1;
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
+        scoreinteger=ScoreIncrease;
     }
     
     if (CGRectIntersectsRect(D1.frame, Basket.frame)){
         D1.center = CGPointMake(D1.center.x, -307);
         ScoreIncrease = ScoreIncrease + 1;
         Score.text = [NSString stringWithFormat:@"Score: %i", ScoreIncrease];
+        scoreinteger=ScoreIncrease;
     }
     
     if (CGRectIntersectsRect(S2.frame, Basket.frame)) {
         S2.center = CGPointMake(S2.center.x, -524);
         LiveDecrease = LiveDecrease - 1;
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
+        scoreinteger=ScoreIncrease;
     }
     
     if (CGRectIntersectsRect(G3.frame, Basket.frame)) {
         G3.center = CGPointMake(G3.center.x, -265);
         ScoreIncrease = ScoreIncrease + 1;
         Score.text = [NSString stringWithFormat:@"Score: %i", ScoreIncrease];
+        scoreinteger=ScoreIncrease;
     }
     
     if (CGRectIntersectsRect(D2.frame, Basket.frame)) {
         D2.center = CGPointMake(D2.center.x, -405);
         ScoreIncrease = ScoreIncrease + 1;
         Score.text = [NSString stringWithFormat:@"Score: %i", ScoreIncrease];
+        scoreinteger=ScoreIncrease;
     }
+    
+
     
 }
 
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    BasketMove = 0;
-}
+
 
 
 - (void)viewDidLoad {
@@ -230,6 +294,7 @@
     Menu.hidden = YES;
     YourScore.hidden = YES;
     Best.hidden = YES;
+    New.hidden = YES;
 
     _timer = [NSTimer scheduledTimerWithTimeInterval:(0.02) target:self selector:@selector(MoveDown) userInfo:nil repeats:YES];   // I've learnt this code from the following website: http://www.cocoachina.com/ios/20150710/12444.html
 
@@ -237,6 +302,16 @@
     LiveDecrease = 10;
     
     ScoreIncrease = 0;
+    
+
+    
+
+
+    
+    
+    
+    
+    
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.

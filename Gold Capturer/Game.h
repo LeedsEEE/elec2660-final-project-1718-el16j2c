@@ -11,6 +11,7 @@
 int LiveDecrease;
 int ScoreIncrease;
 int BasketMove;
+int scoreinteger;
 
 @interface Game : UIViewController{
     
@@ -18,6 +19,7 @@ int BasketMove;
     __weak IBOutlet UILabel *LivesLeft;
     __weak IBOutlet UILabel *YourScore;
     __weak IBOutlet UILabel *Best;
+    __weak IBOutlet UILabel *New;
     
     
     __weak IBOutlet UIImageView *Basket;
