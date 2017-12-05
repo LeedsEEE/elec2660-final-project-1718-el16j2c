@@ -29,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ugp-5V-wE6">
-                                <rect key="frame" x="326" y="285" width="85" height="33"/>
+                                <rect key="frame" x="326" y="276" width="85" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Start">
@@ -40,21 +40,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdU-w6-WDd">
-                                <rect key="frame" x="263" y="336" width="211" height="37"/>
+                                <rect key="frame" x="263" y="326" width="211" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Introduction">
+                                <state key="normal" title="How To Play">
                                     <color key="titleColor" red="0.020816565922459618" green="0.0360910669220895" blue="0.040863827720207246" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="Intro:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vlE-5J-wO2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The aim of this game is to collecte the gold and diamond with a basket and try to avoid stone at the maintime. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDo-5O-vha">
-                                <rect key="frame" x="193" y="158" width="350" height="99"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drag the basket to collecte the gold and diamond as much as you can !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDo-5O-vha">
+                                <rect key="frame" x="193" y="150" width="350" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="textColor" red="0.32792019770372871" green="0.56853708937942382" blue="0.64372166450777202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.094572159021986679" green="0.061688582357495636" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -127,14 +127,6 @@
                                 <rect key="frame" x="0.0" y="394" width="736" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ufd-uu-M0Y">
-                                <rect key="frame" x="721" y="0.0" width="15" height="394"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cgv-lc-rq4">
-                                <rect key="frame" x="0.0" y="0.0" width="15" height="394"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gold.png" translatesAutoresizingMaskIntoConstraints="NO" id="qNf-Ig-lXC">
                                 <rect key="frame" x="45" y="-178" width="38" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -154,13 +146,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Records !!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZi-g0-7Qj">
-                                <rect key="frame" x="249" y="37" width="239" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBC-Pw-G4g">
                                 <rect key="frame" x="285" y="270" width="165" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -170,6 +155,13 @@
                                     <segue destination="BYZ-38-t0r" kind="modal" id="3vP-nf-BwQ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Records !!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZi-g0-7Qj">
+                                <rect key="frame" x="144" y="57" width="449" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="adG-7L-t1q"/>
@@ -184,11 +176,9 @@
                         <outlet property="G1" destination="qNf-Ig-lXC" id="WJ0-On-dCj"/>
                         <outlet property="G2" destination="k91-wY-zca" id="QbD-60-bl1"/>
                         <outlet property="G3" destination="1Bc-Bt-5hG" id="ieu-f6-dP3"/>
-                        <outlet property="LeftEdge" destination="cgv-lc-rq4" id="fgF-AV-HV1"/>
                         <outlet property="LivesLeft" destination="Qtw-Yd-9Uo" id="cew-ZV-d3R"/>
                         <outlet property="Menu" destination="sBC-Pw-G4g" id="5Wi-qE-nH0"/>
                         <outlet property="New" destination="GZi-g0-7Qj" id="fDS-M0-Zhm"/>
-                        <outlet property="RightEdge" destination="Ufd-uu-M0Y" id="NNm-hw-nhj"/>
                         <outlet property="S1" destination="JjJ-vV-CFR" id="I3b-eD-bBC"/>
                         <outlet property="S2" destination="Z3u-Pi-rff" id="gPC-OI-rOq"/>
                         <outlet property="Score" destination="z1x-v2-4Dy" id="Mng-aS-Msy"/>

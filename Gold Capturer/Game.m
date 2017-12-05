@@ -27,16 +27,6 @@
 
 
 
--(void) BasketMovement{   // no need to keep this code
-    Basket.center = CGPointMake(Basket.center.x + BasketMove, Basket.center.y);
-    if (CGRectIntersectsRect(Basket.frame, LeftEdge.frame)){
-        _BasketMove = 0;
-    }
-    if (CGRectIntersectsRect(Basket.frame, RightEdge.frame)){
-        _BasketMove = 0;
-    }
-}
-
 -(void) MoveDown{
     G1.center = CGPointMake(G1.center.x, G1.center.y+3);
     // I've learnt the principle of CGPointMake and how to use CGPointMake from following website:https://tieba.baidu.com/p/2654395877?red_tag=3165378656 and http://blog.csdn.net/yanglishuan/article/details/39989601
@@ -50,11 +40,9 @@
     
     
     NSUserDefaults *userDefaults=[NSUserDefaults standardUserDefaults];
-    NSInteger best = [userDefaults integerForKey:@"The Best"];
+    NSInteger best = [userDefaults integerForKey:@"The Best"]; // I've learnt this code from following website: https://jingyan.baidu.com/article/363872ec2bb80a6e4aa16f5e.html
     
 
-    
-    
     
     if (CGRectIntersectsRect(G1.frame, Bottom.frame)) {  // I've learnt the principle of CGRectIntersectsRect and how to use CGRectIntersectsRect from the following website: https://stackoverflow.com/questions/21646295/collision-detection-cgrectintersectrect
         
@@ -70,6 +58,7 @@
             S2.hidden = YES;
             G3.hidden = YES;
             D2.hidden = YES;
+            Basket.hidden = YES;
             Menu.hidden = NO;
             YourScore.hidden = NO;
             Best.hidden = NO;
@@ -104,6 +93,7 @@
             S2.hidden = YES;
             G3.hidden = YES;
             D2.hidden = YES;
+            Basket.hidden = YES;
             Menu.hidden = NO;
             YourScore.hidden = NO;
             Best.hidden = NO;
@@ -141,6 +131,7 @@
             S2.hidden = YES;
             G3.hidden = YES;
             D2.hidden = YES;
+            Basket.hidden = YES;
             Menu.hidden = NO;
             YourScore.hidden = NO;
             Best.hidden = NO;
@@ -178,13 +169,15 @@
             S2.hidden = YES;
             G3.hidden = YES;
             D2.hidden = YES;
+            Basket.hidden = YES;
             Menu.hidden = NO;
             YourScore.hidden = NO;
             Best.hidden = NO;
             Score.hidden = YES;
             LivesLeft.hidden = YES;
             YourScore.text = [NSString stringWithFormat:@"Your Score: %i", ScoreIncrease];
-            scoreinteger=ScoreIncrease;    if(scoreinteger > best){
+            scoreinteger=ScoreIncrease;
+            if(scoreinteger > best){
                 [userDefaults setInteger: scoreinteger forKey:@"The Best"];
                 Best.text=[NSString stringWithFormat:@"The Best :%d",scoreinteger];
                 New.hidden = NO;
@@ -211,6 +204,7 @@
             S2.hidden = YES;
             G3.hidden = YES;
             D2.hidden = YES;
+            Basket.hidden = YES;
             Menu.hidden = NO;
             YourScore.hidden = NO;
             Best.hidden = NO;
@@ -302,15 +296,6 @@
     LiveDecrease = 10;
     
     ScoreIncrease = 0;
-    
-
-    
-
-
-    
-    
-    
-    
     
     
     [super viewDidLoad];
