@@ -112,9 +112,11 @@
         }
     }
     
+    
     if (CGRectIntersectsRect(S1.frame, Bottom.frame)) {
         S1.center = CGPointMake(S1.center.x, -110); //when stone hit the bottom
     }
+    
     
     if (CGRectIntersectsRect(D1.frame, Bottom.frame)) {
         D1.center = CGPointMake(D1.center.x, -307); // when diamond hit the bottom
@@ -150,9 +152,11 @@
         }
     }
     
+    
     if (CGRectIntersectsRect(S2.frame, Bottom.frame)) {
         S2.center = CGPointMake(S2.center.x, -524); // when stone hit the bottom
     }
+    
     
     if (CGRectIntersectsRect(G3.frame, Bottom.frame)) {
         G3.center = CGPointMake(G3.center.x, -265); // when gold hit the bottom
@@ -188,6 +192,7 @@
             
         }
     }
+    
     
     if (CGRectIntersectsRect(D2.frame, Bottom.frame)) {
         D2.center = CGPointMake(D2.center.x, -405); // when diamond hit the bottom

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B23EB701FD7483700897A98 /* icon.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3B23EB6F1FD7483700897A98 /* icon.JPG */; };
 		3B7072921FC5EDCA000347C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7072911FC5EDCA000347C7 /* AppDelegate.m */; };
 		3B7072951FC5EDCA000347C7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7072941FC5EDCA000347C7 /* ViewController.m */; };
 		3B7072981FC5EDCA000347C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7072961FC5EDCA000347C7 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B23EB6F1FD7483700897A98 /* icon.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon.JPG; sourceTree = "<group>"; };
 		3B70728D1FC5EDCA000347C7 /* Gold Capturer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gold Capturer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7072901FC5EDCA000347C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3B7072911FC5EDCA000347C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				3B7072C81FC5F133000347C7 /* lanzi.png */,
 				3B7072CA1FC5F137000347C7 /* dd.png */,
 				3B7072CC1FC5F151000347C7 /* gold.png */,
+				3B23EB6F1FD7483700897A98 /* icon.JPG */,
 			);
 			path = "Gold Capturer";
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				3B7072981FC5EDCA000347C7 /* Main.storyboard in Resources */,
 				3B7072C51FC5F12B000347C7 /* background1.jpg in Resources */,
 				3B7072C91FC5F133000347C7 /* lanzi.png in Resources */,
+				3B23EB701FD7483700897A98 /* icon.JPG in Resources */,
 				3B7072C31FC5F125000347C7 /* gray bar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +465,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5578E4PX47;
 				INFOPLIST_FILE = "Gold Capturer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jiaxingchen.Gold-Capturer";
@@ -474,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5578E4PX47;
 				INFOPLIST_FILE = "Gold Capturer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jiaxingchen.Gold-Capturer";
