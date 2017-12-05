@@ -10,7 +10,7 @@
 
 
 @interface Game ()
-@property (nonatomic, weak) NSTimer *timer;
+@property NSTimer *timer;
 @property CGFloat BasketMove;
 @end
 
@@ -27,6 +27,7 @@
 
 
 -(void) MoveDown{
+    
     G1.center = CGPointMake(G1.center.x, G1.center.y+3);
     // I've learnt the principle of CGPointMake and how to use CGPointMake from following website:https://tieba.baidu.com/p/2654395877?red_tag=3165378656 and http://blog.csdn.net/yanglishuan/article/details/39989601
     G2.center = CGPointMake(G2.center.x, G2.center.y+3);
@@ -48,7 +49,7 @@
         G1.center = CGPointMake(G1.center.x, -178); //　when gold hit the bottom
         LiveDecrease = LiveDecrease - 1;
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
-        if (LiveDecrease == 0){
+        if (LiveDecrease <= 0){
             [_timer invalidate];
             G1.hidden = YES;
             G2.hidden = YES;
@@ -83,7 +84,7 @@
         
         LiveDecrease = LiveDecrease - 1;
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
-        if (LiveDecrease == 0){
+        if (LiveDecrease <= 0){
             [_timer invalidate];
             G1.hidden = YES;
             G2.hidden = YES;
@@ -123,7 +124,7 @@
         
         LiveDecrease = LiveDecrease - 1;
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
-        if (LiveDecrease == 0){
+        if (LiveDecrease <= 0){
             [_timer invalidate];
             G1.hidden = YES;
             G2.hidden = YES;
@@ -163,7 +164,7 @@
         
         LiveDecrease = LiveDecrease - 1;
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
-        if (LiveDecrease == 0){
+        if (LiveDecrease <= 0){
             [_timer invalidate];
             G1.hidden = YES;
             G2.hidden = YES;
@@ -199,7 +200,7 @@
         
         LiveDecrease = LiveDecrease - 1;
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
-        if (LiveDecrease == 0){
+        if (LiveDecrease <= 0){
             [_timer invalidate];
             G1.hidden = YES;
             G2.hidden = YES;
@@ -294,7 +295,7 @@
     Best.hidden = YES;
     New.hidden = YES;
 
-    _timer = [NSTimer scheduledTimerWithTimeInterval:(0.02) target:self selector:@selector(MoveDown) userInfo:nil repeats:YES];   // I've learnt this code from the following website: http://www.cocoachina.com/ios/20150710/12444.html
+       _timer = [NSTimer scheduledTimerWithTimeInterval:(0.02) target:self selector:@selector(MoveDown) userInfo:nil repeats:YES];// I've learnt this code from the following website: http://www.cocoachina.com/ios/20150710/12444.html
 
     
     LiveDecrease = 10;
