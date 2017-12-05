@@ -7,7 +7,6 @@
 //
 
 #import "Game.h"
-#import "Result.h"
 
 
 @interface Game ()
