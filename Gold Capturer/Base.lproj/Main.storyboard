@@ -82,6 +82,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Best:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LL3-CR-1D7">
+                                <rect key="frame" x="295" y="178" width="158" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stone.png" translatesAutoresizingMaskIntoConstraints="NO" id="JjJ-vV-CFR">
                                 <rect key="frame" x="218" y="-110" width="65" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -137,9 +144,25 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lanzi.png" translatesAutoresizingMaskIntoConstraints="NO" id="lya-dA-1Af">
-                                <rect key="frame" x="329" y="337" width="106" height="57"/>
+                                <rect key="frame" x="329" y="341" width="91" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guV-aJ-F4f">
+                                <rect key="frame" x="295" y="101" width="158" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBC-Pw-G4g">
+                                <rect key="frame" x="292" y="276" width="165" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Back To Menu"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="3vP-nf-BwQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="adG-7L-t1q"/>
@@ -147,6 +170,7 @@
                     <navigationItem key="navigationItem" id="7fe-2P-TTR"/>
                     <connections>
                         <outlet property="Basket" destination="lya-dA-1Af" id="quO-ZK-aUP"/>
+                        <outlet property="Best" destination="LL3-CR-1D7" id="w8m-Mh-5cr"/>
                         <outlet property="Bottom" destination="fUZ-o1-Cl2" id="JBW-3U-eol"/>
                         <outlet property="D1" destination="Swg-ku-EyZ" id="pkM-pc-uZ0"/>
                         <outlet property="D2" destination="Jjt-bT-Za8" id="50g-kk-bwj"/>
@@ -155,10 +179,12 @@
                         <outlet property="G3" destination="1Bc-Bt-5hG" id="ieu-f6-dP3"/>
                         <outlet property="LeftEdge" destination="cgv-lc-rq4" id="fgF-AV-HV1"/>
                         <outlet property="LivesLeft" destination="Qtw-Yd-9Uo" id="cew-ZV-d3R"/>
+                        <outlet property="Menu" destination="sBC-Pw-G4g" id="5Wi-qE-nH0"/>
                         <outlet property="RightEdge" destination="Ufd-uu-M0Y" id="NNm-hw-nhj"/>
                         <outlet property="S1" destination="JjJ-vV-CFR" id="I3b-eD-bBC"/>
                         <outlet property="S2" destination="Z3u-Pi-rff" id="gPC-OI-rOq"/>
                         <outlet property="Score" destination="z1x-v2-4Dy" id="Mng-aS-Msy"/>
+                        <outlet property="YourScore" destination="guV-aJ-F4f" id="YPi-4L-gPE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ff2-mF-PlK" userLabel="First Responder" sceneMemberID="firstResponder"/>

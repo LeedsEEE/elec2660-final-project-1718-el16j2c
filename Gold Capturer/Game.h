@@ -6,7 +6,7 @@
 //  Copyright © 2017年 Jiaxing Chen. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
 
 int LiveDecrease;
 int ScoreIncrease;
@@ -16,6 +16,10 @@ int BasketMove;
     
     __weak IBOutlet UILabel *Score;
     __weak IBOutlet UILabel *LivesLeft;
+    __weak IBOutlet UILabel *YourScore;
+    __weak IBOutlet UILabel *Best;
+    
+    
     __weak IBOutlet UIImageView *Basket;
     __weak IBOutlet UIImageView *Bottom;
     

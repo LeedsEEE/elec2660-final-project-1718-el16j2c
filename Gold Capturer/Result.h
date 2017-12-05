@@ -6,8 +6,8 @@
 //  Copyright © 2017年 Jiaxing Chen. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface Result : ViewController
+@interface Result : UIViewController
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "Game.h"
+#import "Result.h"
+
 
 @interface Game ()
 @property (nonatomic, weak) NSTimer *timer;
@@ -25,14 +27,13 @@
 
 
 
-
--(void) BasketMovement{
+-(void) BasketMovement{   // no need to keep this code
     Basket.center = CGPointMake(Basket.center.x + BasketMove, Basket.center.y);
     if (CGRectIntersectsRect(Basket.frame, LeftEdge.frame)){
-        BasketMove = 0;
+        _BasketMove = 0;
     }
     if (CGRectIntersectsRect(Basket.frame, RightEdge.frame)){
-        BasketMove = 0;
+        _BasketMove = 0;
     }
 }
 
@@ -50,65 +51,125 @@
     
     if (CGRectIntersectsRect(G1.frame, Bottom.frame)) {  // I've learnt the principle of CGRectIntersectsRect and how to use CGRectIntersectsRect from the following website: https://stackoverflow.com/questions/21646295/collision-detection-cgrectintersectrect
         
-        G1.center = CGPointMake(G1.center.x, -178);
+        G1.center = CGPointMake(G1.center.x, -178); //　when gold hit the bottom
         LiveDecrease = LiveDecrease - 1;
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
         if (LiveDecrease == 0){
             [_timer invalidate];
-
+            G1.hidden = YES;
+            G2.hidden = YES;
+            S1.hidden = YES;
+            D1.hidden = YES;
+            S2.hidden = YES;
+            G3.hidden = YES;
+            D2.hidden = YES;
+            Menu.hidden = NO;
+            YourScore.hidden = NO;
+            Best.hidden = NO;
+            Score.hidden = YES;
+            LivesLeft.hidden = YES;
+            YourScore.text = [NSString stringWithFormat:@"Your Score: %i", ScoreIncrease];
         }
     }
     
     
     if (CGRectIntersectsRect(G2.frame, Bottom.frame)) {
-        G2.center = CGPointMake(G2.center.x, -246);
+        G2.center = CGPointMake(G2.center.x, -246); //when gold hit the bottom
         
         LiveDecrease = LiveDecrease - 1;
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
         if (LiveDecrease == 0){
             [_timer invalidate];
-         
+            G1.hidden = YES;
+            G2.hidden = YES;
+            S1.hidden = YES;
+            D1.hidden = YES;
+            S2.hidden = YES;
+            G3.hidden = YES;
+            D2.hidden = YES;
+            Menu.hidden = NO;
+            YourScore.hidden = NO;
+            Best.hidden = NO;
+            Score.hidden = YES;
+            LivesLeft.hidden = YES;
+            YourScore.text = [NSString stringWithFormat:@"Your Score: %i", ScoreIncrease];
         }
     }
     
     if (CGRectIntersectsRect(S1.frame, Bottom.frame)) {
-        S1.center = CGPointMake(S1.center.x, -110);
+        S1.center = CGPointMake(S1.center.x, -110); //when stone hit the bottom
     }
     
     if (CGRectIntersectsRect(D1.frame, Bottom.frame)) {
-        D1.center = CGPointMake(D1.center.x, -307);
+        D1.center = CGPointMake(D1.center.x, -307); // when diamond hit the bottom
         
         LiveDecrease = LiveDecrease - 1;
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
         if (LiveDecrease == 0){
             [_timer invalidate];
-           
+            G1.hidden = YES;
+            G2.hidden = YES;
+            S1.hidden = YES;
+            D1.hidden = YES;
+            S2.hidden = YES;
+            G3.hidden = YES;
+            D2.hidden = YES;
+            Menu.hidden = NO;
+            YourScore.hidden = NO;
+            Best.hidden = NO;
+            Score.hidden = YES;
+            LivesLeft.hidden = YES;
+            YourScore.text = [NSString stringWithFormat:@"Your Score: %i", ScoreIncrease];
         }
     }
     
     if (CGRectIntersectsRect(S2.frame, Bottom.frame)) {
-        S2.center = CGPointMake(S2.center.x, -524);
+        S2.center = CGPointMake(S2.center.x, -524); // when stone hit the bottom
     }
     
     if (CGRectIntersectsRect(G3.frame, Bottom.frame)) {
-        G3.center = CGPointMake(G3.center.x, -265);
+        G3.center = CGPointMake(G3.center.x, -265); // when gold hit the bottom
         
         LiveDecrease = LiveDecrease - 1;
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
         if (LiveDecrease == 0){
             [_timer invalidate];
-           
+            G1.hidden = YES;
+            G2.hidden = YES;
+            S1.hidden = YES;
+            D1.hidden = YES;
+            S2.hidden = YES;
+            G3.hidden = YES;
+            D2.hidden = YES;
+            Menu.hidden = NO;
+            YourScore.hidden = NO;
+            Best.hidden = NO;
+            Score.hidden = YES;
+            LivesLeft.hidden = YES;
+            YourScore.text = [NSString stringWithFormat:@"Your Score: %i", ScoreIncrease];
         }
     }
     
     if (CGRectIntersectsRect(D2.frame, Bottom.frame)) {
-        D2.center = CGPointMake(D2.center.x, -405);
+        D2.center = CGPointMake(D2.center.x, -405); // when diamond hit the bottom
         
         LiveDecrease = LiveDecrease - 1;
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
         if (LiveDecrease == 0){
             [_timer invalidate];
-           
+            G1.hidden = YES;
+            G2.hidden = YES;
+            S1.hidden = YES;
+            D1.hidden = YES;
+            S2.hidden = YES;
+            G3.hidden = YES;
+            D2.hidden = YES;
+            Menu.hidden = NO;
+            YourScore.hidden = NO;
+            Best.hidden = NO;
+            Score.hidden = YES;
+            LivesLeft.hidden = YES;
+            YourScore.text = [NSString stringWithFormat:@"Your Score: %i", ScoreIncrease];
         }
     }
     
@@ -167,7 +228,9 @@
 - (void)viewDidLoad {
     
     Menu.hidden = YES;
-    
+    YourScore.hidden = YES;
+    Best.hidden = YES;
+
     _timer = [NSTimer scheduledTimerWithTimeInterval:(0.02) target:self selector:@selector(MoveDown) userInfo:nil repeats:YES];   // I've learnt this code from the following website: http://www.cocoachina.com/ios/20150710/12444.html
 
     
