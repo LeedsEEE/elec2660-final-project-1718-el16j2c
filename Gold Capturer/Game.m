@@ -49,7 +49,7 @@
         G1.center = CGPointMake(G1.center.x, -178); //　when gold hit the bottom
         LiveDecrease = LiveDecrease - 1;
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
-        if (LiveDecrease <= 0){
+        if (LiveDecrease < 0){
             [_timer invalidate];
             G1.hidden = YES;
             G2.hidden = YES;
@@ -84,7 +84,7 @@
         
         LiveDecrease = LiveDecrease - 1;
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
-        if (LiveDecrease <= 0){
+        if (LiveDecrease < 0){
             [_timer invalidate];
             G1.hidden = YES;
             G2.hidden = YES;
@@ -124,7 +124,7 @@
         
         LiveDecrease = LiveDecrease - 1;
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
-        if (LiveDecrease <= 0){
+        if (LiveDecrease < 0){
             [_timer invalidate];
             G1.hidden = YES;
             G2.hidden = YES;
@@ -164,7 +164,7 @@
         
         LiveDecrease = LiveDecrease - 1;
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
-        if (LiveDecrease <= 0){
+        if (LiveDecrease < 0){
             [_timer invalidate];
             G1.hidden = YES;
             G2.hidden = YES;
@@ -200,7 +200,7 @@
         
         LiveDecrease = LiveDecrease - 1;
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
-        if (LiveDecrease <= 0){
+        if (LiveDecrease < 0){
             [_timer invalidate];
             G1.hidden = YES;
             G2.hidden = YES;
@@ -295,7 +295,7 @@
     Best.hidden = YES;
     New.hidden = YES;
 
-       _timer = [NSTimer scheduledTimerWithTimeInterval:(0.02) target:self selector:@selector(MoveDown) userInfo:nil repeats:YES];// I've learnt this code from the following website: http://www.cocoachina.com/ios/20150710/12444.html
+       _timer = [NSTimer scheduledTimerWithTimeInterval:(0.016) target:self selector:@selector(MoveDown) userInfo:nil repeats:YES];// I've learnt this code from the following website: http://www.cocoachina.com/ios/20150710/12444.html
 
     
     LiveDecrease = 10;
