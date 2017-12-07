@@ -251,6 +251,33 @@
         LiveDecrease = LiveDecrease - 1;
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
         scoreinteger=ScoreIncrease;
+        if (LiveDecrease < 0){
+            [_timer invalidate];
+            G1.hidden = YES;
+            G2.hidden = YES;
+            S1.hidden = YES;
+            D1.hidden = YES;
+            S2.hidden = YES;
+            G3.hidden = YES;
+            D2.hidden = YES;
+            Basket.hidden = YES;
+            Menu.hidden = NO;
+            YourScore.hidden = NO;
+            Best.hidden = NO;
+            Score.hidden = YES;
+            LivesLeft.hidden = YES;
+            YourScore.text = [NSString stringWithFormat:@"Your Score: %i", ScoreIncrease];
+            scoreinteger=ScoreIncrease;
+            if(scoreinteger > best){
+                [userDefaults setInteger: scoreinteger forKey:@"The Best"];
+                Best.text=[NSString stringWithFormat:@"The Best :%d",scoreinteger];
+                New.hidden = NO;
+            }
+            
+            else{
+                Best.text=[NSString stringWithFormat:@"The Best : %ld", (long)best];
+            }
+        }
     }
     
     if (CGRectIntersectsRect(D1.frame, Basket.frame)){
@@ -265,6 +292,33 @@
         LiveDecrease = LiveDecrease - 1;
         LivesLeft.text = [NSString stringWithFormat:@"Lives Left: %i", LiveDecrease];
         scoreinteger=ScoreIncrease;
+        if (LiveDecrease < 0){
+            [_timer invalidate];
+            G1.hidden = YES;
+            G2.hidden = YES;
+            S1.hidden = YES;
+            D1.hidden = YES;
+            S2.hidden = YES;
+            G3.hidden = YES;
+            D2.hidden = YES;
+            Basket.hidden = YES;
+            Menu.hidden = NO;
+            YourScore.hidden = NO;
+            Best.hidden = NO;
+            Score.hidden = YES;
+            LivesLeft.hidden = YES;
+            YourScore.text = [NSString stringWithFormat:@"Your Score: %i", ScoreIncrease];
+            scoreinteger=ScoreIncrease;
+            if(scoreinteger > best){
+                [userDefaults setInteger: scoreinteger forKey:@"The Best"];
+                Best.text=[NSString stringWithFormat:@"The Best :%d",scoreinteger];
+                New.hidden = NO;
+            }
+            
+            else{
+                Best.text=[NSString stringWithFormat:@"The Best : %ld", (long)best];
+            }
+        }
     }
     
     if (CGRectIntersectsRect(G3.frame, Basket.frame)) {
