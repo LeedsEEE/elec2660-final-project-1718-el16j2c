@@ -230,6 +230,8 @@
     }
     
     
+    
+    
     // the code below shown what happened when basket collect the gold, diamond and stone.
     
     if (CGRectIntersectsRect(G1.frame, Basket.frame)) {
@@ -349,7 +351,7 @@
     Best.hidden = YES;
     New.hidden = YES;
 
-       _timer = [NSTimer scheduledTimerWithTimeInterval:(0.016) target:self selector:@selector(MoveDown) userInfo:nil repeats:YES];// I've learnt this code from the following website: http://www.cocoachina.com/ios/20150710/12444.html
+       _timer = [NSTimer scheduledTimerWithTimeInterval:(0.013) target:self selector:@selector(MoveDown) userInfo:nil repeats:YES];// I've learnt this code from the following website: http://www.cocoachina.com/ios/20150710/12444.html
 
     
     LiveDecrease = 10;
